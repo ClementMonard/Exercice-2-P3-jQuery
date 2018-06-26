@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercice 2 partie 3</title>
+    <script src="jquery-3.2.1.js"></script>
+  </head>
+  <body>
+    <label for="lastName" id="form">CLICK </label><input type="text" name="clickMe" id="clickMe" value="0" />
+    <button type="button" name="button" id="buttonClickPlus">+</button>
+    <button type="button" name="button"id="buttonClickMinus">-</button>
+  </body>
+  <script>
+  //Déclaration de la variable clickOnMe
+    var counting = 0;
+    $('#buttonClickPlus').click(function(){
+      //Incrémentation de counting quand on clique
+      counting++;
+      //Récupération de la value de counting pour l'afficher dans clickMe (input)
+      $('#clickMe').val(counting);
+    });
+
+    $('#buttonClickMinus').click(function(){
+      //Décrémentation de counting quand on clique
+      counting--;
+      //Récupération de la value de counting pour l'afficher dans clickMe (input)
+      $('#clickMe').val(counting);
+    });
+  </script>
+</html>
